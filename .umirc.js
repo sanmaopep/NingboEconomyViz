@@ -1,6 +1,7 @@
 
 // ref: https://umijs.org/config/
 export default {
+  singular: true,
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
