@@ -1,73 +1,49 @@
 import React from 'react';
-import ReactEcharts from 'echarts-for-react';
-import NingboGDP from '../../data/ningboGDP'
+import { Tabs, Col, Row } from "antd";
+import GDPChart from "../components/GDPChart";
+import DistritPieChart from "../components/DistritPieChart";
 
-const getOption = () => {
-  return {
-    title: {
-      text: '宁波GDP与增长率走势分析'
-    },
-    legend: {
-      data: ['GDP', '增长率', '全国增长率']
-    },
-    grid: {
-      right: '10%'
-    },
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: {
-        type: 'cross'
-      }
-    },
-    xAxis: {
-      type: 'category',
-      data: NingboGDP.map(i => i.year + '年')
-    },
-    yAxis: [
-      {
-        type: 'value',
-        name: 'GDP',
-        position: 'left',
-        axisLabel: {
-          formatter: '{value} 亿元'
-        }
-      },
-      {
-        type: 'value',
-        name: '增长率',
-        position: 'right',
-        axisLabel: {
-          formatter: '{value} %'
-        }
-      },
-    ],
-    series: [
-      {
-        name: "GDP",
-        data: NingboGDP.map(i => i.gdp),
-        type: 'bar'
-      },
-      {
-        name: "增长率",
-        yAxisIndex: 1,
-        data: NingboGDP.map(i => i.rate),
-        type: 'line'
-      },
-      {
-        name: "全国增长率",
-        yAxisIndex: 1,
-        data: NingboGDP.map(i => i.national_rate),
-        type: 'line'
-      },
-    ]
-  }
-}
+import GDP from '../../data/GDP'
+import DistrictGDP from '../../data/DistrictGDP'
+
+const TabPane = Tabs.TabPane;
 
 export default function () {
-  return <ReactEcharts
-    style={{
-      height: 500
-    }}
-    option={getOption()}
-  />
+  return <Tabs
+    tabPosition="left"
+    defaultActiveKey="1"
+    style={{ minHeight: 500 }}
+  >
+    <TabPane tab="浙江" key="1">
+      <Row>
+        <Col span={12}>
+          <GDPChart city="浙江" data={GDP.Zhejiang} />
+
+        </Col>
+        <Col span={12}>
+          <DistritPieChart
+            title="浙江2017年各城市GDP分布图"
+            data={DistrictGDP.Zhejiang}
+          />
+        </Col>
+      </Row>
+    </TabPane>
+    <TabPane tab="宁波" key="2">
+      <Row>
+        <Col span={12}>
+          <GDPChart
+            city="宁波"
+            data={GDP.Ningbo}
+          />
+        </Col>
+        <Col span={12}>
+          <DistritPieChart
+            title="宁波2017年各县市GDP分布图"
+            data={DistrictGDP.Ningbo}
+          />
+        </Col>
+      </Row>
+    </TabPane>
+
+  </Tabs >
 }

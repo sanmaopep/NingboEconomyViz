@@ -6,6 +6,6 @@ export default [
     {
         router: "/",
         name: "宏观GDP走势",
-        icon: "pie-chart"
+        icon: "line-chart"
     }
 ]

@@ -34,7 +34,7 @@ class BasicLayout extends Component {
           onCollapse={this.onCollapse}
         >
           <h2 className={this.state.collapsed ? styles.logoHide : styles.logo}>
-            NingboViz
+            Economy Viz
           </h2>
           <Menu
             theme="dark"
