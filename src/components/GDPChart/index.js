@@ -11,7 +11,7 @@ const getOption = (city, data) => {
             y: 'bottom',
         },
         grid: {
-            right: '10%'
+            right: '15%'
         },
         tooltip: {
             trigger: 'axis',
@@ -30,15 +30,15 @@ const getOption = (city, data) => {
             {
                 type: 'value',
                 name: 'GDP',
-                position: 'left',
+                position: 'right',
                 axisLabel: {
                     formatter: '{value} 亿元'
-                }
+                },
             },
             {
                 type: 'value',
                 name: '增长率',
-                position: 'right',
+                position: 'left',
                 axisLabel: {
                     formatter: '{value} %'
                 }

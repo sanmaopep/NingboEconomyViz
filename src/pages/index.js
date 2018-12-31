@@ -16,11 +16,11 @@ export default function () {
   >
     <TabPane tab="浙江" key="1">
       <Row>
-        <Col span={12}>
+        <Col span={14}>
           <GDPChart city="浙江" data={GDP.Zhejiang} />
 
         </Col>
-        <Col span={12}>
+        <Col span={10}>
           <DistritPieChart
             title="浙江2017年各城市GDP分布图"
             data={DistrictGDP.Zhejiang}
@@ -30,13 +30,13 @@ export default function () {
     </TabPane>
     <TabPane tab="宁波" key="2">
       <Row>
-        <Col span={12}>
+        <Col span={14}>
           <GDPChart
             city="宁波"
             data={GDP.Ningbo}
           />
         </Col>
-        <Col span={12}>
+        <Col span={10}>
           <DistritPieChart
             title="宁波2017年各县市GDP分布图"
             data={DistrictGDP.Ningbo}
