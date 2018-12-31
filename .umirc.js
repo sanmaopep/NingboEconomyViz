@@ -1,14 +1,14 @@
 
 // ref: https://umijs.org/config/
 export default {
-  singular: true,
+  history: 'hash',
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
       antd: true,
       dva: false,
-      dynamicImport: true,
-      title: 'frontend',
+      dynamicImport: false,
+      title: 'ningbo viz',
       dll: false,
       routes: {
         exclude: [],
