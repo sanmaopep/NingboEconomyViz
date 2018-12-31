@@ -1,0 +1,23 @@
+
+.logo{
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  padding: 20px;
+  height: 70px;
+  transition: 0.5s all;
+}
+
+.logoHide{
+  opacity: 0;
+  visibility: hidden;
+  height: 70px;
+  padding: 20px;
+
+}
+
+.trigger{
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
