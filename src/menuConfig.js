@@ -3,10 +3,9 @@
  */
 
 export default [
-
     {
-        router: "/GDP",
-        name: "GDP趋势",
+        router: "/",
+        name: "宏观GDP走势",
         icon: "pie-chart"
     }
 ]

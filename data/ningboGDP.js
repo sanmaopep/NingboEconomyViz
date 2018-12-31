@@ -3,7 +3,7 @@
  * rate %
  * national_rate %
  */
-const ningboGDP = [
+export default [
     {
         "year": 2005,
         "gdp": 2447.32,

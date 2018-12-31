@@ -34,7 +34,7 @@ class BasicLayout extends Component {
           onCollapse={this.onCollapse}
         >
           <h2 className={this.state.collapsed ? styles.logoHide : styles.logo}>
-            WeiboViz Pro
+            NingboViz
           </h2>
           <Menu
             theme="dark"
@@ -72,7 +72,7 @@ class BasicLayout extends Component {
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            @数据可视化小组
+            @毛怡伟 数据可视化作业
           </Footer>
         </Layout>
       </Layout>
